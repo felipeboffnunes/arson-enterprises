@@ -1,8 +1,9 @@
-from dash import Dash, html
+from dash import Dash
+import dash_bootstrap_components as dbc
 
 from layouts.main_page import main_page_layout
 
-app = Dash(__name__)
+app = Dash(__name__, external_stylesheets=[dbc.themes.LUX])
 
 app.layout = main_page_layout
 
