@@ -1,10 +1,10 @@
 from dash import Dash, html
 
+from layouts.main_page import main_page_layout
+
 app = Dash(__name__)
 
-app.layout = html.Div(children=[
-    html.H1(children='Arson Enterprises'),
-])
+app.layout = main_page_layout
 
 if __name__ == '__main__':
     app.run_server(debug=True)
