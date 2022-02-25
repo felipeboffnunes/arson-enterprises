@@ -1,3 +1,5 @@
 dash==2.2.0
 pandas==1.4.1
 sd-material-ui==4.6.0
+dash-ui==0.4.0
+dash-bootstrap-components==1.0.3
