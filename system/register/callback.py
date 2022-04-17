@@ -1,28 +1,11 @@
-from dash import html, Input, Output
+
+from system.register.callbacks.main_layout import register_main_layout_callbacks
+from system.register.callbacks.towers import register_towers_callbacks
 
 
 def register_callbacks(app):
 
-    @app.callback(
-        Output("main-page-content", "children"),
-        Input("menu_fragment_tabs", "value")
-    )
-    def routes_tab(tab):
-        return _routes_tab(tab)
+    app = register_main_layout_callbacks(app)
+    app = register_towers_callbacks(app)
 
     return app
-
-
-def _routes_tab(tab: str = "DEFAULT") -> html.Div:
-    tabs_layout = {
-        "DEFAULT": html.Div(
-            html.H3("Default Tab"),
-        ),
-        "REVERSE_JENGA": html.Div(
-            html.H3("Reverse Jenga"),
-        ),
-        "CAFFEINE_CONTROL": html.Div(
-            html.H3("Caffeine Control (WIP)"),
-        )
-    }
-    return tabs_layout[tab]
