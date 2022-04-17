@@ -22,7 +22,7 @@ def _routes_tab(tab: str = "DEFAULT") -> html.Div:
             html.H3("Reverse Jenga"),
         ),
         "CAFFEINE_CONTROL": html.Div(
-            html.H3("Caffeine Control"),
+            html.H3("Caffeine Control (WIP)"),
         )
     }
     return tabs_layout[tab]
